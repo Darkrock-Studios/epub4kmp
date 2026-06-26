@@ -9,8 +9,8 @@ forked [epublib](https://github.com/psiegman/epublib)). All Java/JVM-only code i
 the fork has been replaced with multiplatform equivalents:
 
 - **Streams** — [okio](https://square.github.io/okio/) `Source` / `Sink`
-- **ZIP** — [no.synth:kmp-zip](https://github.com/henrik242/kmp-zip) for writing,
-  [okio](https://square.github.io/okio/)'s `FileSystem.openZip()` for reading
+- **ZIP** — [no.synth:kmp-zip](https://github.com/henrik242/kmp-zip) for both
+  reading (`ZipFile` random-access / `ZipInputStream` streaming) and writing
 - **XML** — [xmlutil](https://github.com/pdvrieze/xmlutil) (DOM2 reads, streaming `XmlWriter` writes)
 - **Date/UUID** — [kotlinx-datetime](https://github.com/Kotlin/kotlinx-datetime), `kotlin.uuid.Uuid`
 
