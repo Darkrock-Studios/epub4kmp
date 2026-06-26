@@ -2,17 +2,18 @@ package io.documentnode.epub4kmp.epub
 
 import io.documentnode.epub4kmp.domain.*
 import io.documentnode.epub4kmp.util.ResourceUtil
-import io.documentnode.epub4kmp.util.openEpubZip
+import io.documentnode.epub4kmp.util.openEpubZipHandle
+import io.documentnode.epub4kmp.util.readEntryBytes
 import no.synth.kmpzip.okio.asInputStream
+import no.synth.kmpzip.okio.asSeekableSource
+import no.synth.kmpzip.zip.ZipFile
 import no.synth.kmpzip.zip.ZipInputStream
 import okio.*
-import okio.Path.Companion.toPath
 
 /**
  * Loads [Resources] out of EPUB archives.
  */
 object ResourcesLoader {
-    private val ROOT: Path = "/".toPath()
 
     /**
      * Loads all entries from the given [Source] (a streaming ZIP).
@@ -52,31 +53,33 @@ object ResourcesLoader {
         defaultHtmlEncoding: String,
         lazyLoadedTypes: List<MediaType> = emptyList()
     ): Resources {
-        val zipFs = openEpubZip(fileSystem, zipPath)
         val provider = EpubResourceProvider(fileSystem, zipPath)
         val resources = Resources()
 
-        fun walk(dir: Path) {
-            for (path in zipFs.list(dir)) {
-                val meta = zipFs.metadata(path)
-                if (meta.isDirectory) {
-                    walk(path)
-                    continue
+        val handle = openEpubZipHandle(fileSystem, zipPath)
+        try {
+            val zip = ZipFile(handle.asSeekableSource())
+            try {
+                for (entry in zip.entries) {
+                    if (entry.isDirectory) continue
+                    val href = entry.name.trimStart('/')
+                    if (href.isEmpty()) continue
+                    val resource: Resource = if (shouldLoadLazy(href, lazyLoadedTypes)) {
+                        LazyResource(provider, entry.size, entry.name, href)
+                    } else {
+                        ResourceUtil.createResource(href, zip.readEntryBytes(entry))
+                    }
+                    if (resource.mediaType == MediaTypes.XHTML) {
+                        resource.inputEncoding = defaultHtmlEncoding
+                    }
+                    resources.add(resource)
                 }
-                val href = path.toString().trimStart('/')
-                val resource: Resource = if (shouldLoadLazy(href, lazyLoadedTypes)) {
-                    LazyResource(provider, meta.size ?: -1L, href)
-                } else {
-                    val bytes = zipFs.read(path) { readByteArray() }
-                    ResourceUtil.createResource(href, bytes)
-                }
-                if (resource.mediaType == MediaTypes.XHTML) {
-                    resource.inputEncoding = defaultHtmlEncoding
-                }
-                resources.add(resource)
+            } finally {
+                zip.close()
             }
+        } finally {
+            handle.close()
         }
-        walk(ROOT)
         return resources
     }
 

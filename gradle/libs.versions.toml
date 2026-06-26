@@ -2,7 +2,7 @@
 kotlin = "2.3.21"
 okio = "3.17.0"
 xmlutil = "0.91.3"
-kmpZip = "0.11.3"
+kmpZip = "0.12.1"
 kotlinxDatetime = "0.7.1"
 maven-central-publish = "0.36.0"
 clikt = "5.0.3"
@@ -20,6 +20,7 @@ kotlinxBrowser = "0.5.0"
 
 [libraries]
 okio = { module = "com.squareup.okio:okio", version.ref = "okio" }
+okio-fakefilesystem = { module = "com.squareup.okio:okio-fakefilesystem", version.ref = "okio" }
 xmlutil-core = { module = "io.github.pdvrieze.xmlutil:core", version.ref = "xmlutil" }
 xmlutil-serialization = { module = "io.github.pdvrieze.xmlutil:serialization", version.ref = "xmlutil" }
 kmp-zip = { module = "no.synth:kmp-zip", version.ref = "kmpZip" }

@@ -1,14 +1,16 @@
 package io.documentnode.epub4kmp.util
 
+import okio.FileHandle
 import okio.FileSystem
 import okio.Path
 
 /**
- * Opens the ZIP at [zipPath] as a read-only [FileSystem].
+ * Opens the EPUB ZIP at [zipPath] as a read-only [FileHandle] for random-access
+ * reading via kmp-zip's `ZipFile`.
  *
- * Backed by okio's `openZip` on JVM and native targets. wasmJs has no okio ZIP
- * filesystem (and no real on-disk filesystem in the browser), so the wasmJs
- * actual throws — load EPUBs there via `EpubReader.readEpub(source)` instead,
- * which streams through kmp-zip and works on every target.
+ * JVM and native back this with okio's `openReadOnly`. wasmJs has no on-disk
+ * filesystem in the browser, so its actual throws — load EPUBs there via
+ * `EpubReader.readEpub(source)`, which streams through kmp-zip and works on
+ * every target.
  */
-internal expect fun openEpubZip(fileSystem: FileSystem, zipPath: Path): FileSystem
+internal expect fun openEpubZipHandle(fileSystem: FileSystem, zipPath: Path): FileHandle

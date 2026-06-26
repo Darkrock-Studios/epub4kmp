@@ -1,25 +1,34 @@
 package io.documentnode.epub4kmp.domain
 
-import io.documentnode.epub4kmp.util.openEpubZip
+import io.documentnode.epub4kmp.util.openEpubZipHandle
+import io.documentnode.epub4kmp.util.readEntryBytes
+import no.synth.kmpzip.okio.asSeekableSource
+import no.synth.kmpzip.zip.ZipFile
 import okio.FileSystem
 import okio.Path
-import okio.Path.Companion.toPath
 
 /**
  * Lazily reads resources from an EPUB on disk.
  *
- * The ZIP is opened once (parsing the central directory) and the resulting
- * read-only filesystem is reused across every [getResourceBytes] call, so a
- * book with many lazily loaded resources doesn't re-parse the archive per fetch.
+ * Each call to [getResourceBytes] opens the ZIP and seeks straight to the
+ * requested entry via its central directory, without streaming the archive.
  */
 class EpubResourceProvider(
     private val fileSystem: FileSystem,
     private val zipPath: Path
 ) : LazyResourceProvider {
-    private val zipFs: FileSystem by lazy { openEpubZip(fileSystem, zipPath) }
-
     override fun getResourceBytes(href: String): ByteArray {
-        val entryPath = "/$href".toPath()
-        return zipFs.read(entryPath) { readByteArray() }
+        val handle = openEpubZipHandle(fileSystem, zipPath)
+        try {
+            val zip = ZipFile(handle.asSeekableSource())
+            try {
+                val entry = zip.getEntry(href) ?: error("Missing entry: $href")
+                return zip.readEntryBytes(entry)
+            } finally {
+                zip.close()
+            }
+        } finally {
+            handle.close()
+        }
     }
 }
