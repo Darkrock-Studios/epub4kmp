@@ -1,0 +1,475 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>MediaTypes</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    epub4kmp
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.2.0
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":epub4kmp-core/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":epub4kmp-core/commonMain" data-filter=":epub4kmp-core/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    epub4kmp
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="epub4kmp-core::io.documentnode.epub4kmp.domain/MediaTypes///PointingToDeclaration//-1204734157">
+  <div class="breadcrumbs"><a href="../../index.html">epub4kmp-core</a><span class="delimiter">/</span><a href="../index.html">io.documentnode.epub4kmp.domain</a><span class="delimiter">/</span><span class="current">MediaTypes</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Media</span><wbr><span><span>Types</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">MediaTypes</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/Darkrock-Studios/epub4kmp/blob/main/epub4kmp-core/src/commonMain/kotlin/io/documentnode/epub4kmp/domain/MediaTypes.kt#L8">source</a>)</span></span></div><p class="paragraph">Manages mediatypes that are used by epubs</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">paul</p></span></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="-933509508%2FProperties%2F-1204734157" anchor-label="CSS" id="-933509508%2FProperties%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-s-s.html"><span><span>CSS</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-933509508%2FProperties%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-c-s-s.html">CSS</a><span class="token operator">: </span><a href="../-media-type/index.html">MediaType</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="950934339%2FProperties%2F-1204734157" anchor-label="EPUB" id="950934339%2FProperties%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-e-p-u-b.html"><span><span>EPUB</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="950934339%2FProperties%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-e-p-u-b.html">EPUB</a><span class="token operator">: </span><a href="../-media-type/index.html">MediaType</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="913048539%2FProperties%2F-1204734157" anchor-label="GIF" id="913048539%2FProperties%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-g-i-f.html"><span><span>GIF</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="913048539%2FProperties%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-g-i-f.html">GIF</a><span class="token operator">: </span><a href="../-media-type/index.html">MediaType</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1178386066%2FProperties%2F-1204734157" anchor-label="JAVASCRIPT" id="-1178386066%2FProperties%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-j-a-v-a-s-c-r-i-p-t.html"><span><span>JAVASCRIPT</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1178386066%2FProperties%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-j-a-v-a-s-c-r-i-p-t.html">JAVASCRIPT</a><span class="token operator">: </span><a href="../-media-type/index.html">MediaType</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1678777762%2FProperties%2F-1204734157" anchor-label="JPG" id="-1678777762%2FProperties%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-j-p-g.html"><span><span>JPG</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1678777762%2FProperties%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-j-p-g.html">JPG</a><span class="token operator">: </span><a href="../-media-type/index.html">MediaType</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1553921818%2FProperties%2F-1204734157" anchor-label="mediaTypes" id="-1553921818%2FProperties%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="media-types.html"><span>media</span><wbr><span><span>Types</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1553921818%2FProperties%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="media-types.html">mediaTypes</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="../-media-type/index.html">MediaType</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1806771004%2FProperties%2F-1204734157" anchor-label="mediaTypesByName" id="-1806771004%2FProperties%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="media-types-by-name.html"><span>media</span><wbr><span>Types</span><wbr><span>By</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1806771004%2FProperties%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="media-types-by-name.html">mediaTypesByName</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-mutable-map/index.html">MutableMap</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="../-media-type/index.html">MediaType</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1231583759%2FProperties%2F-1204734157" anchor-label="MP3" id="1231583759%2FProperties%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-m-p3.html"><span><span>MP3</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1231583759%2FProperties%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-m-p3.html">MP3</a><span class="token operator">: </span><a href="../-media-type/index.html">MediaType</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1262603566%2FProperties%2F-1204734157" anchor-label="MP4" id="1262603566%2FProperties%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-m-p4.html"><span><span>MP4</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1262603566%2FProperties%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-m-p4.html">MP4</a><span class="token operator">: </span><a href="../-media-type/index.html">MediaType</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1786467556%2FProperties%2F-1204734157" anchor-label="NCX" id="-1786467556%2FProperties%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-n-c-x.html"><span><span>NCX</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1786467556%2FProperties%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-n-c-x.html">NCX</a><span class="token operator">: </span><a href="../-media-type/index.html">MediaType</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1277915248%2FProperties%2F-1204734157" anchor-label="OGG" id="1277915248%2FProperties%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-o-g-g.html"><span><span>OGG</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1277915248%2FProperties%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-o-g-g.html">OGG</a><span class="token operator">: </span><a href="../-media-type/index.html">MediaType</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-977341001%2FProperties%2F-1204734157" anchor-label="OPENTYPE" id="-977341001%2FProperties%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-o-p-e-n-t-y-p-e.html"><span><span>OPENTYPE</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-977341001%2FProperties%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-o-p-e-n-t-y-p-e.html">OPENTYPE</a><span class="token operator">: </span><a href="../-media-type/index.html">MediaType</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1908519176%2FProperties%2F-1204734157" anchor-label="PLS" id="1908519176%2FProperties%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-l-s.html"><span><span>PLS</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1908519176%2FProperties%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-p-l-s.html">PLS</a><span class="token operator">: </span><a href="../-media-type/index.html">MediaType</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-835457770%2FProperties%2F-1204734157" anchor-label="PNG" id="-835457770%2FProperties%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-n-g.html"><span><span>PNG</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-835457770%2FProperties%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-p-n-g.html">PNG</a><span class="token operator">: </span><a href="../-media-type/index.html">MediaType</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="189397598%2FProperties%2F-1204734157" anchor-label="SMIL" id="189397598%2FProperties%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-m-i-l.html"><span><span>SMIL</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="189397598%2FProperties%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-s-m-i-l.html">SMIL</a><span class="token operator">: </span><a href="../-media-type/index.html">MediaType</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1798277435%2FProperties%2F-1204734157" anchor-label="SVG" id="1798277435%2FProperties%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-v-g.html"><span><span>SVG</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1798277435%2FProperties%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-s-v-g.html">SVG</a><span class="token operator">: </span><a href="../-media-type/index.html">MediaType</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-410706951%2FProperties%2F-1204734157" anchor-label="TTF" id="-410706951%2FProperties%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-t-f.html"><span><span>TTF</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-410706951%2FProperties%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-t-t-f.html">TTF</a><span class="token operator">: </span><a href="../-media-type/index.html">MediaType</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-618629597%2FProperties%2F-1204734157" anchor-label="WOFF" id="-618629597%2FProperties%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-w-o-f-f.html"><span><span>WOFF</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-618629597%2FProperties%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-w-o-f-f.html">WOFF</a><span class="token operator">: </span><a href="../-media-type/index.html">MediaType</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="978392028%2FProperties%2F-1204734157" anchor-label="XHTML" id="978392028%2FProperties%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-x-h-t-m-l.html"><span><span>XHTML</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="978392028%2FProperties%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-x-h-t-m-l.html">XHTML</a><span class="token operator">: </span><a href="../-media-type/index.html">MediaType</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1215626870%2FProperties%2F-1204734157" anchor-label="XPGT" id="1215626870%2FProperties%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-x-p-g-t.html"><span><span>XPGT</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1215626870%2FProperties%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-x-p-g-t.html">XPGT</a><span class="token operator">: </span><a href="../-media-type/index.html">MediaType</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-569336172%2FFunctions%2F-1204734157" anchor-label="determineMediaType" id="-569336172%2FFunctions%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="determine-media-type.html"><span>determine</span><wbr><span>Media</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-569336172%2FFunctions%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="determine-media-type.html"><span class="token function">determineMediaType</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">filename<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-media-type/index.html">MediaType</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Gets the MediaType based on the file extension. Null of no matching extension found.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1325475155%2FFunctions%2F-1204734157" anchor-label="getMediaTypeByName" id="1325475155%2FFunctions%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-media-type-by-name.html"><span>get</span><wbr><span>Media</span><wbr><span>Type</span><wbr><span>By</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1325475155%2FFunctions%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-media-type-by-name.html"><span class="token function">getMediaTypeByName</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">mediaTypeName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-media-type/index.html">MediaType</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-91890594%2FFunctions%2F-1204734157" anchor-label="isBitmapImage" id="-91890594%2FFunctions%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-bitmap-image.html"><span>is</span><wbr><span>Bitmap</span><wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-91890594%2FFunctions%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-bitmap-image.html"><span class="token function">isBitmapImage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">mediaType<span class="token operator">: </span><a href="../-media-type/index.html">MediaType</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

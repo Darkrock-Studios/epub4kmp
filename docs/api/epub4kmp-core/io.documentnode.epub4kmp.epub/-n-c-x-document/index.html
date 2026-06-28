@@ -1,0 +1,265 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>NCXDocument</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    epub4kmp
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.2.0
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":epub4kmp-core/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":epub4kmp-core/commonMain" data-filter=":epub4kmp-core/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    epub4kmp
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="epub4kmp-core::io.documentnode.epub4kmp.epub/NCXDocument///PointingToDeclaration//-1204734157">
+  <div class="breadcrumbs"><a href="../../index.html">epub4kmp-core</a><span class="delimiter">/</span><a href="../index.html">io.documentnode.epub4kmp.epub</a><span class="delimiter">/</span><span class="current">NCXDocument</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>NCXDocument</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">NCXDocument</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/Darkrock-Studios/epub4kmp/blob/main/epub4kmp-core/src/commonMain/kotlin/io/documentnode/epub4kmp/epub/NCXDocument.kt#L16">source</a>)</span></span></div><p class="paragraph">Reads and writes the NCX (Navigation Control file for XML) document defined by namespace <code class="lang-kotlin">http://www.daisy.org/z3986/2005/ncx/</code>.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="-1309106429%2FProperties%2F-1204734157" anchor-label="DEFAULT_NCX_HREF" id="-1309106429%2FProperties%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-e-f-a-u-l-t_-n-c-x_-h-r-e-f.html"><span>DEFAULT_</span><wbr><span>NCX_</span><wbr><span>HREF</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1309106429%2FProperties%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-d-e-f-a-u-l-t_-n-c-x_-h-r-e-f.html">DEFAULT_NCX_HREF</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1185091693%2FProperties%2F-1204734157" anchor-label="NAMESPACE_NCX" id="-1185091693%2FProperties%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-n-a-m-e-s-p-a-c-e_-n-c-x.html"><span>NAMESPACE_</span><wbr><span>NCX</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1185091693%2FProperties%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-n-a-m-e-s-p-a-c-e_-n-c-x.html">NAMESPACE_NCX</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1058210873%2FProperties%2F-1204734157" anchor-label="NCX_ITEM_ID" id="-1058210873%2FProperties%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-n-c-x_-i-t-e-m_-i-d.html"><span>NCX_</span><wbr><span>ITEM_</span><wbr><span>ID</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1058210873%2FProperties%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-n-c-x_-i-t-e-m_-i-d.html">NCX_ITEM_ID</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-434364989%2FProperties%2F-1204734157" anchor-label="PREFIX_DTB" id="-434364989%2FProperties%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-r-e-f-i-x_-d-t-b.html"><span>PREFIX_</span><wbr><span>DTB</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-434364989%2FProperties%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-p-r-e-f-i-x_-d-t-b.html">PREFIX_DTB</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1466863790%2FProperties%2F-1204734157" anchor-label="PREFIX_NCX" id="-1466863790%2FProperties%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-r-e-f-i-x_-n-c-x.html"><span>PREFIX_</span><wbr><span>NCX</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1466863790%2FProperties%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-p-r-e-f-i-x_-n-c-x.html">PREFIX_NCX</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="157022925%2FFunctions%2F-1204734157" anchor-label="createNCXResource" id="157022925%2FFunctions%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="create-n-c-x-resource.html"><span>create</span><wbr><span><span>NCXResource</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="157022925%2FFunctions%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="create-n-c-x-resource.html"><span class="token function">createNCXResource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">book<span class="token operator">: </span><a href="../../io.documentnode.epub4kmp.domain/-book/index.html">Book</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../io.documentnode.epub4kmp.domain/-resource/index.html">Resource</a></div><div class="brief "><p class="paragraph">Builds an NCX <a href="../../io.documentnode.epub4kmp.domain/-resource/index.html">Resource</a> containing the table of contents for <a href="create-n-c-x-resource.html">book</a>.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="create-n-c-x-resource.html"><span class="token function">createNCXResource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">identifiers<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../io.documentnode.epub4kmp.domain/-identifier/index.html">Identifier</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">title<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">authors<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../io.documentnode.epub4kmp.domain/-author/index.html">Author</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">tableOfContents<span class="token operator">: </span><a href="../../io.documentnode.epub4kmp.domain/-table-of-contents/index.html">TableOfContents</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../io.documentnode.epub4kmp.domain/-resource/index.html">Resource</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1112594735%2FFunctions%2F-1204734157" anchor-label="read" id="1112594735%2FFunctions%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="read.html"><span><span>read</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1112594735%2FFunctions%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="read.html"><span class="token function">read</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">book<span class="token operator">: </span><a href="../../io.documentnode.epub4kmp.domain/-book/index.html">Book</a><span class="token punctuation">, </span></span><span class="parameter ">epubReader<span class="token operator">: </span><a href="../-epub-reader/index.html">EpubReader</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../io.documentnode.epub4kmp.domain/-resource/index.html">Resource</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1697169826%2FFunctions%2F-1204734157" anchor-label="readTOCReference" id="1697169826%2FFunctions%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="read-t-o-c-reference.html"><span>read</span><wbr><span><span>TOCReference</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1697169826%2FFunctions%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="read-t-o-c-reference.html"><span class="token function">readTOCReference</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">navpointElement<span class="token operator">: </span><span data-unresolved-link="nl.adaptivity.xmlutil.dom2/Element///PointingToDeclaration/">Element</span><span class="token punctuation">, </span></span><span class="parameter ">book<span class="token operator">: </span><a href="../../io.documentnode.epub4kmp.domain/-book/index.html">Book</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../io.documentnode.epub4kmp.domain/-t-o-c-reference/index.html">TOCReference</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-427847877%2FFunctions%2F-1204734157" anchor-label="write" id="-427847877%2FFunctions%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="write.html"><span><span>write</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-427847877%2FFunctions%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="write.html"><span class="token function">write</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">writer<span class="token operator">: </span><span data-unresolved-link="nl.adaptivity.xmlutil/XmlWriter///PointingToDeclaration/">XmlWriter</span><span class="token punctuation">, </span></span><span class="parameter ">book<span class="token operator">: </span><a href="../../io.documentnode.epub4kmp.domain/-book/index.html">Book</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="write.html"><span class="token function">write</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">writer<span class="token operator">: </span><span data-unresolved-link="nl.adaptivity.xmlutil/XmlWriter///PointingToDeclaration/">XmlWriter</span><span class="token punctuation">, </span></span><span class="parameter ">identifiers<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../io.documentnode.epub4kmp.domain/-identifier/index.html">Identifier</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">title<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">authors<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../io.documentnode.epub4kmp.domain/-author/index.html">Author</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">tableOfContents<span class="token operator">: </span><a href="../../io.documentnode.epub4kmp.domain/-table-of-contents/index.html">TableOfContents</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

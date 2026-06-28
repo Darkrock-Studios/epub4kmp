@@ -1,0 +1,434 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Navigator</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    epub4kmp
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.2.0
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":epub4kmp-core/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":epub4kmp-core/commonMain" data-filter=":epub4kmp-core/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    epub4kmp
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="epub4kmp-core::io.documentnode.epub4kmp.browsersupport/Navigator///PointingToDeclaration//-1204734157">
+  <div class="breadcrumbs"><a href="../../index.html">epub4kmp-core</a><span class="delimiter">/</span><a href="../index.html">io.documentnode.epub4kmp.browsersupport</a><span class="delimiter">/</span><span class="current">Navigator</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Navigator</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">Navigator</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">var </span>book<span class="token operator">: </span><a href="../../io.documentnode.epub4kmp.domain/-book/index.html">Book</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/Darkrock-Studios/epub4kmp/blob/main/epub4kmp-core/src/commonMain/kotlin/io/documentnode/epub4kmp/browsersupport/Navigator.kt#L15">source</a>)</span></span></div><p class="paragraph">A helper class for EPUB browser applications.</p><p class="paragraph">Tracks the user's position within a <a href="../../io.documentnode.epub4kmp.domain/-book/index.html">Book</a>, supports moving between resources, and notifies registered <a href="../-navigation-event-listener/index.html">NavigationEventListener</a>s.</p><p class="paragraph">Not thread-safe; protect external access if you call this from multiple coroutines.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="-1948617584%2FConstructors%2F-1204734157" anchor-label="Navigator" id="-1948617584%2FConstructors%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-navigator.html"><span><span>Navigator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1948617584%2FConstructors%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">book<span class="token operator">: </span><a href="../../io.documentnode.epub4kmp.domain/-book/index.html">Book</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="-1654951289%2FProperties%2F-1204734157" anchor-label="book" id="-1654951289%2FProperties%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="book.html"><span><span>book</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1654951289%2FProperties%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="book.html">book</a><span class="token operator">: </span><a href="../../io.documentnode.epub4kmp.domain/-book/index.html">Book</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="758195110%2FProperties%2F-1204734157" anchor-label="currentFragmentId" id="758195110%2FProperties%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="current-fragment-id.html"><span>current</span><wbr><span>Fragment</span><wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="758195110%2FProperties%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="current-fragment-id.html">currentFragmentId</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="606221699%2FProperties%2F-1204734157" anchor-label="currentResource" id="606221699%2FProperties%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="current-resource.html"><span>current</span><wbr><span><span>Resource</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="606221699%2FProperties%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="current-resource.html">currentResource</a><span class="token operator">: </span><a href="../../io.documentnode.epub4kmp.domain/-resource/index.html">Resource</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1523349886%2FProperties%2F-1204734157" anchor-label="currentSectionPos" id="-1523349886%2FProperties%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="current-section-pos.html"><span>current</span><wbr><span>Section</span><wbr><span><span>Pos</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1523349886%2FProperties%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="current-section-pos.html">currentSectionPos</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="249341221%2FFunctions%2F-1204734157" anchor-label="addNavigationEventListener" id="249341221%2FFunctions%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-navigation-event-listener.html"><span>add</span><wbr><span>Navigation</span><wbr><span>Event</span><wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="249341221%2FFunctions%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="add-navigation-event-listener.html"><span class="token function">addNavigationEventListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">listener<span class="token operator">: </span><a href="../-navigation-event-listener/index.html">NavigationEventListener</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1219864260%2FFunctions%2F-1204734157" anchor-label="getCurrentSpinePos" id="-1219864260%2FFunctions%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-current-spine-pos.html"><span>get</span><wbr><span>Current</span><wbr><span>Spine</span><wbr><span><span>Pos</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1219864260%2FFunctions%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-current-spine-pos.html"><span class="token function">getCurrentSpinePos</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">The current position within the spine, or <code class="lang-kotlin">&lt; 0</code> if the current position is not within the spine.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-518789881%2FFunctions%2F-1204734157" anchor-label="gotoBook" id="-518789881%2FFunctions%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="goto-book.html"><span>goto</span><wbr><span><span>Book</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-518789881%2FFunctions%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="goto-book.html"><span class="token function">gotoBook</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">book<span class="token operator">: </span><a href="../../io.documentnode.epub4kmp.domain/-book/index.html">Book</a><span class="token punctuation">, </span></span><span class="parameter ">source<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-275604377%2FFunctions%2F-1204734157" anchor-label="gotoFirstSpineSection" id="-275604377%2FFunctions%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="goto-first-spine-section.html"><span>goto</span><wbr><span>First</span><wbr><span>Spine</span><wbr><span><span>Section</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-275604377%2FFunctions%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="goto-first-spine-section.html"><span class="token function">gotoFirstSpineSection</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">source<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-975581331%2FFunctions%2F-1204734157" anchor-label="gotoLastSpineSection" id="-975581331%2FFunctions%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="goto-last-spine-section.html"><span>goto</span><wbr><span>Last</span><wbr><span>Spine</span><wbr><span><span>Section</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-975581331%2FFunctions%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="goto-last-spine-section.html"><span class="token function">gotoLastSpineSection</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">source<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-402146870%2FFunctions%2F-1204734157" anchor-label="gotoNextSpineSection" id="-402146870%2FFunctions%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="goto-next-spine-section.html"><span>goto</span><wbr><span>Next</span><wbr><span>Spine</span><wbr><span><span>Section</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-402146870%2FFunctions%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="goto-next-spine-section.html"><span class="token function">gotoNextSpineSection</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">source<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1530046963%2FFunctions%2F-1204734157" anchor-label="gotoPreviousSpineSection" id="1530046963%2FFunctions%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="goto-previous-spine-section.html"><span>goto</span><wbr><span>Previous</span><wbr><span>Spine</span><wbr><span><span>Section</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1530046963%2FFunctions%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="goto-previous-spine-section.html"><span class="token function">gotoPreviousSpineSection</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">source<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="goto-previous-spine-section.html"><span class="token function">gotoPreviousSpineSection</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">pagePos<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">source<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1129792236%2FFunctions%2F-1204734157" anchor-label="gotoResource" id="1129792236%2FFunctions%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="goto-resource.html"><span>goto</span><wbr><span><span>Resource</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1129792236%2FFunctions%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="goto-resource.html"><span class="token function">gotoResource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">resource<span class="token operator">: </span><a href="../../io.documentnode.epub4kmp.domain/-resource/index.html">Resource</a><span class="token punctuation">, </span></span><span class="parameter ">source<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="goto-resource.html"><span class="token function">gotoResource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">resourceHref<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">source<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="goto-resource.html"><span class="token function">gotoResource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">resource<span class="token operator">: </span><a href="../../io.documentnode.epub4kmp.domain/-resource/index.html">Resource</a><span class="token punctuation">, </span></span><span class="parameter ">pagePos<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">source<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="goto-resource.html"><span class="token function">gotoResource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">resource<span class="token operator">: </span><a href="../../io.documentnode.epub4kmp.domain/-resource/index.html">Resource</a><span class="token punctuation">, </span></span><span class="parameter ">fragmentId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">source<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="goto-resource.html"><span class="token function">gotoResource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">resource<span class="token operator">: </span><a href="../../io.documentnode.epub4kmp.domain/-resource/index.html">Resource</a><span class="token punctuation">, </span></span><span class="parameter ">pagePos<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">fragmentId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">source<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1501352582%2FFunctions%2F-1204734157" anchor-label="gotoResourceId" id="1501352582%2FFunctions%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="goto-resource-id.html"><span>goto</span><wbr><span>Resource</span><wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1501352582%2FFunctions%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="goto-resource-id.html"><span class="token function">gotoResourceId</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">resourceId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">source<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="228048119%2FFunctions%2F-1204734157" anchor-label="gotoSpineSection" id="228048119%2FFunctions%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="goto-spine-section.html"><span>goto</span><wbr><span>Spine</span><wbr><span><span>Section</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="228048119%2FFunctions%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="goto-spine-section.html"><span class="token function">gotoSpineSection</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">newSpinePos<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">source<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><br><div class="symbol monospace"><span class="token keyword">fun </span><a href="goto-spine-section.html"><span class="token function">gotoSpineSection</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">newSpinePos<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">newPagePos<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">source<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">Go to a specific section. Illegal spine positions are silently ignored.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1222221221%2FFunctions%2F-1204734157" anchor-label="hasNextSpineSection" id="-1222221221%2FFunctions%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="has-next-spine-section.html"><span>has</span><wbr><span>Next</span><wbr><span>Spine</span><wbr><span><span>Section</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1222221221%2FFunctions%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="has-next-spine-section.html"><span class="token function">hasNextSpineSection</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1376920407%2FFunctions%2F-1204734157" anchor-label="hasPreviousSpineSection" id="1376920407%2FFunctions%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="has-previous-spine-section.html"><span>has</span><wbr><span>Previous</span><wbr><span>Spine</span><wbr><span><span>Section</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1376920407%2FFunctions%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="has-previous-spine-section.html"><span class="token function">hasPreviousSpineSection</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1045292840%2FFunctions%2F-1204734157" anchor-label="removeNavigationEventListener" id="1045292840%2FFunctions%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="remove-navigation-event-listener.html"><span>remove</span><wbr><span>Navigation</span><wbr><span>Event</span><wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1045292840%2FFunctions%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="remove-navigation-event-listener.html"><span class="token function">removeNavigationEventListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">listener<span class="token operator">: </span><a href="../-navigation-event-listener/index.html">NavigationEventListener</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1105532038%2FFunctions%2F-1204734157" anchor-label="setCurrentResource" id="1105532038%2FFunctions%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-current-resource.html"><span>set</span><wbr><span>Current</span><wbr><span><span>Resource</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1105532038%2FFunctions%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="set-current-resource.html"><span class="token function">setCurrentResource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">currentResource<span class="token operator">: </span><a href="../../io.documentnode.epub4kmp.domain/-resource/index.html">Resource</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">Sets the current index and resource without calling the event listeners.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1752123878%2FFunctions%2F-1204734157" anchor-label="setCurrentSpinePos" id="1752123878%2FFunctions%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-current-spine-pos.html"><span>set</span><wbr><span>Current</span><wbr><span>Spine</span><wbr><span><span>Pos</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1752123878%2FFunctions%2F-1204734157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="set-current-spine-pos.html"><span class="token function">setCurrentSpinePos</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">currentIndex<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the current index and resource without calling the event listeners.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

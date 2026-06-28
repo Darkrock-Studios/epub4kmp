@@ -1,0 +1,217 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>epub4kmp-core</title>
+<link href="../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../scripts/sourceset_dependencies.js" async></script>
+<link href="../styles/style.css" rel="Stylesheet">
+<link href="../styles/main.css" rel="Stylesheet">
+<link href="../styles/prism.css" rel="Stylesheet">
+<link href="../styles/logo-styles.css" rel="Stylesheet">
+<link href="../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../scripts/main.js" defer></script>
+<script type="text/javascript" src="../scripts/prism.js" async></script>
+<script type="text/javascript" src="../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../index.html" tabindex="1">
+                    epub4kmp
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.2.0
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":epub4kmp-core/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":epub4kmp-core/commonMain" data-filter=":epub4kmp-core/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    epub4kmp
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" id="content" pageids="epub4kmp-core::////PointingToDeclaration//-1204734157">
+  <div class="breadcrumbs"></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>epub4kmp-core</span></span></h1>
+    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":epub4kmp-core/commonMain"><p class="paragraph">A Kotlin Multiplatform library for reading, writing, and manipulating EPUB files — a KMP fork of <a href="https://github.com/documentnode/epub4j">epub4j</a> with all JVM-only code replaced by multiplatform equivalents (okio, xmlutil, kotlinx-datetime). Runs on JVM, Android, iOS, macOS, Linux, and Windows.</p><blockquote class="quotation"><p class="paragraph"><strong>Try it live:</strong> <a href="https://darkrock-studios.github.io/epub4kmp/">the EPUB reader running on Wasm »</a></p></blockquote><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">implementation("com.darkrockstudios:epub4kmp-core:0.2.0")</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><p class="paragraph">For drop-in Compose reader UI on top of this, see the <strong>epub4kmp-compose-ui</strong> module.</p><h2 class="">Reading an EPUB</h2><p class="paragraph">Create an <a href="io.documentnode.epub4kmp.epub/-epub-reader/index.html">EpubReader</a> and read from an okio <code class="lang-kotlin">Path</code> (or any <code class="lang-kotlin">Source</code>). The result is a <a href="io.documentnode.epub4kmp.domain/-book/index.html">Book</a>:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">import io.documentnode.epub4kmp.epub.EpubReader<br>import okio.FileSystem<br>import okio.Path.Companion.toPath<br><br>val book = EpubReader().readEpub(FileSystem.SYSTEM, "book.epub".toPath())<br><br>println(book.title)<br>book.metadata.authors.forEach { println("${it.firstname} ${it.lastname}") }</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><p class="paragraph">For large books, keep heavy resources out of memory by lazy-loading them from the ZIP on demand — pass the <a href="io.documentnode.epub4kmp.domain/-media-types/index.html">MediaTypes</a> you want deferred:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val book = EpubReader().readEpub(<br>    fileSystem = FileSystem.SYSTEM,<br>    zipPath = "book.epub".toPath(),<br>    lazyLoadedTypes = listOf(MediaTypes.JPG, MediaTypes.PNG),<br>)</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><h2 class="">Inspecting the book</h2><p class="paragraph">A <a href="io.documentnode.epub4kmp.domain/-book/index.html">Book</a> exposes the EPUB's structure:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">book.spine.getSpineReferences()           // reading order<br>book.tableOfContents.getTocReferences()   // navigation tree<br>book.coverImage                           // cover Resource, if any<br><br>val html = book.spine.getResource(0)?.asString()   // first chapter's XHTML</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><h2 class="">Writing / creating an EPUB</h2><p class="paragraph">Build or modify a <a href="io.documentnode.epub4kmp.domain/-book/index.html">Book</a> and write it with <a href="io.documentnode.epub4kmp.epub/-epub-writer/index.html">EpubWriter</a>:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">import io.documentnode.epub4kmp.epub.EpubWriter<br>import io.documentnode.epub4kmp.util.ResourceUtil<br>import okio.buffer<br><br>book.addSection("Afterword", ResourceUtil.createResource("Afterword", "afterword.html"))<br><br>FileSystem.SYSTEM.sink("out.epub".toPath()).buffer().use { sink -&gt;<br>    EpubWriter().write(book, sink)<br>}</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><p class="paragraph">Hook the read/write pipeline with a <a href="io.documentnode.epub4kmp.epub/-book-processor/index.html">BookProcessor</a> when you need to transform content (the default writer uses one to auto-link stylesheets).</p></div></div>
+  </div>
+  <h2 class="">Packages</h2>
+  <div class="table"><a data-name="2065487517%2FPackages%2F-1204734157" anchor-label="io.documentnode.epub4kmp" id="2065487517%2FPackages%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="io.documentnode.epub4kmp/index.html">io.documentnode.epub4kmp</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2065487517%2FPackages%2F-1204734157"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right platform-tags--wrapper">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1915835172%2FPackages%2F-1204734157" anchor-label="io.documentnode.epub4kmp.browsersupport" id="-1915835172%2FPackages%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="io.documentnode.epub4kmp.browsersupport/index.html">io.documentnode.epub4kmp.browsersupport</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1915835172%2FPackages%2F-1204734157"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right platform-tags--wrapper">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div><span class="brief-comment"><a data-name="-1915835172%2FPackages%2F-1204734157" anchor-label="io.documentnode.epub4kmp.browsersupport" id="-1915835172%2FPackages%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+            <p class="paragraph">Helpers for building a reader UI: <a href="io.documentnode.epub4kmp.browsersupport/-navigator/index.html">Navigator</a> tracks the current position in a book and emits <a href="io.documentnode.epub4kmp.browsersupport/-navigation-event/index.html">NavigationEvent</a>s, with <a href="io.documentnode.epub4kmp.browsersupport/-navigation-history/index.html">NavigationHistory</a> for back/forward.</p>
+          </span></div>
+      </div>
+    </div>
+<a data-name="1780019897%2FPackages%2F-1204734157" anchor-label="io.documentnode.epub4kmp.domain" id="1780019897%2FPackages%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="io.documentnode.epub4kmp.domain/index.html">io.documentnode.epub4kmp.domain</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1780019897%2FPackages%2F-1204734157"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right platform-tags--wrapper">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div><span class="brief-comment"><a data-name="1780019897%2FPackages%2F-1204734157" anchor-label="io.documentnode.epub4kmp.domain" id="1780019897%2FPackages%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+            <p class="paragraph">The EPUB object model: <a href="io.documentnode.epub4kmp.domain/-book/index.html">Book</a> and everything it holds — <a href="io.documentnode.epub4kmp.domain/-metadata/index.html">Metadata</a>, <a href="io.documentnode.epub4kmp.domain/-resources/index.html">Resources</a> / <a href="io.documentnode.epub4kmp.domain/-resource/index.html">Resource</a>, <a href="io.documentnode.epub4kmp.domain/-spine/index.html">Spine</a>, <a href="io.documentnode.epub4kmp.domain/-table-of-contents/index.html">TableOfContents</a>, <a href="io.documentnode.epub4kmp.domain/-guide/index.html">Guide</a>, plus the <a href="io.documentnode.epub4kmp.domain/-media-types/index.html">MediaTypes</a> registry and a <a href="io.documentnode.epub4kmp.domain/-stylesheet-builder/index.html">stylesheet</a> DSL.</p>
+          </span></div>
+      </div>
+    </div>
+<a data-name="-1774900691%2FPackages%2F-1204734157" anchor-label="io.documentnode.epub4kmp.epub" id="-1774900691%2FPackages%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="io.documentnode.epub4kmp.epub/index.html">io.documentnode.epub4kmp.epub</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1774900691%2FPackages%2F-1204734157"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right platform-tags--wrapper">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div><span class="brief-comment"><a data-name="-1774900691%2FPackages%2F-1204734157" anchor-label="io.documentnode.epub4kmp.epub" id="-1774900691%2FPackages%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+            <p class="paragraph">The read/write entry points: <a href="io.documentnode.epub4kmp.epub/-epub-reader/index.html">EpubReader</a>, <a href="io.documentnode.epub4kmp.epub/-epub-writer/index.html">EpubWriter</a>, and the <a href="io.documentnode.epub4kmp.epub/-book-processor/index.html">BookProcessor</a> pipeline for transforming a <a href="io.documentnode.epub4kmp.domain/-book/index.html">Book</a> during reading or writing.</p>
+          </span></div>
+      </div>
+    </div>
+<a data-name="966640951%2FPackages%2F-1204734157" anchor-label="io.documentnode.epub4kmp.util" id="966640951%2FPackages%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":epub4kmp-core/commonMain" data-filterable-set=":epub4kmp-core/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="io.documentnode.epub4kmp.util/index.html">io.documentnode.epub4kmp.util</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="966640951%2FPackages%2F-1204734157"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right platform-tags--wrapper">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div><span class="brief-comment"><a data-name="966640951%2FPackages%2F-1204734157" anchor-label="io.documentnode.epub4kmp.util" id="966640951%2FPackages%2F-1204734157" data-filterable-set=":epub4kmp-core/commonMain"></a>
+            <p class="paragraph">Small public helpers, most notably <a href="io.documentnode.epub4kmp.util/-resource-util/index.html">ResourceUtil</a> for creating <a href="io.documentnode.epub4kmp.domain/-resource/index.html">Resource</a>s and parsing them as XML.</p>
+          </span></div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

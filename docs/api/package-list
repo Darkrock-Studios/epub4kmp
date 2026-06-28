@@ -1,0 +1,11 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+
+module:epub4kmp-compose-ui
+io.documentnode.epub4kmp.compose
+module:epub4kmp-core
+io.documentnode.epub4kmp
+io.documentnode.epub4kmp.browsersupport
+io.documentnode.epub4kmp.domain
+io.documentnode.epub4kmp.epub
+io.documentnode.epub4kmp.util
