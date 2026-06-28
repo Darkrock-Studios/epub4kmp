@@ -1,6 +1,7 @@
 # epub4kmp
 
 [![Maven Central](https://img.shields.io/maven-central/v/com.darkrockstudios/epub4kmp-core.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/com.darkrockstudios/epub4kmp-core)
+[![API Docs](https://img.shields.io/badge/docs-API_reference-blue.svg)](https://darkrock-studios.github.io/epub4kmp/api/)
 
 A Kotlin Multiplatform library for reading, writing, and manipulating EPUB files.
 
@@ -15,7 +16,8 @@ the fork has been replaced with multiplatform equivalents:
 - **Date/UUID** — [kotlinx-datetime](https://github.com/Kotlin/kotlinx-datetime), `kotlin.uuid.Uuid`
 
 ## Try the demo
-You can try the eReader sample [in your browser](https://wavesonics.github.io/epub4kmp/).
+You can try the eReader sample [in your browser](https://darkrock-studios.github.io/epub4kmp/),
+or browse the [API reference & recipes](https://darkrock-studios.github.io/epub4kmp/api/).
 
 You can download sample EPUBs [here](https://idpf.github.io/epub3-samples/30/samples.html).
 

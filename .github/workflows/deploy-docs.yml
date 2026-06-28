@@ -1,0 +1,74 @@
+name: Deploy Docs
+
+# Builds the Dokka API docs and publishes them to docs/api on the `demo` branch,
+# which GitHub Pages serves. The wasm reader demo at the site root is left untouched —
+# it is refreshed separately by :samples:reader-web:updateDemo on the demo branch.
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy-docs
+  cancel-in-progress: false
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - uses: actions/cache@v4
+        with:
+          path: ~/.konan
+          key: ${{ runner.os }}-konan-${{ hashFiles('**/*.gradle.kts', 'gradle/libs.versions.toml') }}
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v5
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v5
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Build API docs
+        run: ./gradlew :dokkaGenerate --no-daemon --stacktrace
+
+      - name: Publish docs/api to the demo branch
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Check out the publishing branch in a separate worktree so the freshly
+          # generated docs/api in the build checkout is left untouched.
+          git fetch origin demo
+          git worktree add "$RUNNER_TEMP/demo" demo
+
+          # Replace only the API docs; leave the wasm demo, DEMO.md, .nojekyll, etc.
+          rm -rf "$RUNNER_TEMP/demo/docs/api"
+          mkdir -p "$RUNNER_TEMP/demo/docs"
+          cp -a docs/api "$RUNNER_TEMP/demo/docs/api"
+
+          cd "$RUNNER_TEMP/demo"
+          git add docs/api
+          if git diff --cached --quiet; then
+            echo "API docs unchanged; nothing to publish."
+          else
+            git commit -m "Update API docs for ${GITHUB_REF_NAME:-manual run}"
+            git push origin demo
+          fi

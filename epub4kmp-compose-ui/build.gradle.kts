@@ -8,6 +8,19 @@ plugins {
 	alias(libs.plugins.compose)
 	alias(libs.plugins.compose.compiler)
 	alias(libs.plugins.maven.central.publish)
+	alias(libs.plugins.dokka)
+}
+
+dokka {
+	moduleName.set("epub4kmp-compose-ui")
+	dokkaSourceSets.configureEach {
+		includes.from("Module.md")
+		sourceLink {
+			localDirectory.set(rootDir)
+			remoteUrl("https://github.com/Darkrock-Studios/epub4kmp/blob/main")
+			remoteLineSuffix.set("#L")
+		}
+	}
 }
 
 kotlin {
@@ -72,7 +85,7 @@ mavenPublishing {
 					"epub4kmp-core. Ships building-block composables and a batteries-included " +
 					"EpubReader screen."
 		)
-		url.set("https://github.com/Wavesonics/epub4kmp")
+		url.set("https://github.com/Darkrock-Studios/epub4kmp")
 		licenses {
 			license {
 				name.set("Apache License, Version 2.0")
@@ -88,9 +101,9 @@ mavenPublishing {
 			}
 		}
 		scm {
-			connection.set("scm:git:git://github.com/Wavesonics/epub4kmp.git")
-			developerConnection.set("scm:git:ssh://github.com/Wavesonics/epub4kmp.git")
-			url.set("https://github.com/Wavesonics/epub4kmp")
+			connection.set("scm:git:git://github.com/Darkrock-Studios/epub4kmp.git")
+			developerConnection.set("scm:git:ssh://github.com/Darkrock-Studios/epub4kmp.git")
+			url.set("https://github.com/Darkrock-Studios/epub4kmp")
 		}
 	}
 }

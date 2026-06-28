@@ -17,6 +17,7 @@ filekit = "0.14.0"
 kotlinxCoroutines = "1.10.1"
 nucleus = "1.15.6"
 kotlinxBrowser = "0.5.0"
+dokka = "2.2.0"
 
 [libraries]
 okio = { module = "com.squareup.okio:okio", version.ref = "okio" }
@@ -45,3 +46,4 @@ maven-central-publish = { id = "com.vanniktech.maven.publish", version.ref = "ma
 compose = { id = "org.jetbrains.compose", version.ref = "compose" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
+dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }

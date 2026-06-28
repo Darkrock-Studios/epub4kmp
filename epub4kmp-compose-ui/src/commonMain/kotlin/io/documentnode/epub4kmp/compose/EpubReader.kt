@@ -38,6 +38,7 @@ class EpubReaderState internal constructor(
 		})
 	}
 
+	/** The chapter [Resource] currently displayed, or `null` if none. Changes recompose readers of this state. */
 	val currentResource: Resource?
 		get() = navigator.currentResource
 
@@ -45,22 +46,29 @@ class EpubReaderState internal constructor(
 	val currentFragmentId: String?
 		get() = navigator.currentFragmentId?.ifEmpty { null }
 
+	/** Whether a previous spine section exists to navigate to via [previous]. */
 	val hasPrevious: Boolean get() = navigator.hasPreviousSpineSection()
+
+	/** Whether a next spine section exists to navigate to via [next]. */
 	val hasNext: Boolean get() = navigator.hasNextSpineSection()
 
+	/** Advances to the next spine section. No-op if [hasNext] is `false`. */
 	fun next() {
 		navigator.gotoNextSpineSection(this)
 	}
 
+	/** Goes back to the previous spine section. No-op if [hasPrevious] is `false`. */
 	fun previous() {
 		navigator.gotoPreviousSpineSection(this)
 	}
 
+	/** Navigates to the target of TOC entry [ref], including its `#fragment` if present. No-op if [ref] has no resource. */
 	fun goto(ref: TOCReference) {
 		val resource = ref.resource ?: return
 		navigator.gotoResource(resource, ref.fragmentId.orEmpty(), this)
 	}
 
+	/** Navigates to the EPUB-relative [href], which may include a `#fragment`. */
 	fun gotoHref(href: String) {
 		navigator.gotoResource(href, this)
 	}

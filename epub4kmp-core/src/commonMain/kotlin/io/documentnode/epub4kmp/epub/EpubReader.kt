@@ -42,6 +42,12 @@ class EpubReader {
         ResourcesLoader.loadResources(fileSystem, zipPath, encoding, lazyLoadedTypes)
     )
 
+    /**
+     * Builds a [Book] from already-loaded [Resources].
+     *
+     * Low-level entry point: locates and processes the package and NCX
+     * documents, populating [result] in place.
+     */
     fun readEpub(
         resources: Resources,
         result: Book = Book()

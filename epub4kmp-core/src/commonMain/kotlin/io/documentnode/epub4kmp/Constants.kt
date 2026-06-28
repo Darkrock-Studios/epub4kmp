@@ -1,5 +1,6 @@
 package io.documentnode.epub4kmp
 
+/** Shared EPUB and XML constants used across reading and writing. */
 interface Constants {
     companion object {
         const val CHARACTER_ENCODING: String = "UTF-8"

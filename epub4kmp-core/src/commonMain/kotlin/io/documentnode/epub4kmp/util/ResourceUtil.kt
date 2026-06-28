@@ -7,7 +7,7 @@ import io.documentnode.epub4kmp.epub.EpubProcessorSupport
 import nl.adaptivity.xmlutil.dom2.Document
 
 /**
- * Utility helpers for [Resource] instances.
+ * Factory helpers for creating [Resource] instances and parsing them as XML.
  */
 object ResourceUtil {
     /**

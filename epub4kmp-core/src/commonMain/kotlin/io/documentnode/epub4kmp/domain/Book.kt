@@ -142,6 +142,11 @@ class Book {
         return tocReference
     }
 
+    /**
+     * Rebuilds the [Spine] so its order matches the [TableOfContents].
+     *
+     * Preserves the existing spine's tocResource.
+     */
     fun generateSpineFromTableOfContents() {
         val spine = Spine(tableOfContents)
 
@@ -152,6 +157,13 @@ class Book {
     }
 
 
+    /**
+     * Adds a raw [Resource] to the book's set of [Resources] without touching
+     * the [TableOfContents] or [Spine].
+     *
+     * @param resource the resource to add
+     * @return the added resource
+     */
     fun addResource(resource: Resource): Resource {
         return resources.add(resource)
     }

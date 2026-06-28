@@ -5,6 +5,19 @@ import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 plugins {
   alias(libs.plugins.kotlin.multiplatform)
   alias(libs.plugins.maven.central.publish)
+  alias(libs.plugins.dokka)
+}
+
+dokka {
+  moduleName.set("epub4kmp-core")
+  dokkaSourceSets.configureEach {
+    includes.from("Module.md")
+    sourceLink {
+      localDirectory.set(rootDir)
+      remoteUrl("https://github.com/Darkrock-Studios/epub4kmp/blob/main")
+      remoteLineSuffix.set("#L")
+    }
+  }
 }
 
 kotlin {
@@ -67,7 +80,7 @@ mavenPublishing {
       "Kotlin Multiplatform library for reading/writing/manipulating EPUB files. " +
         "A KMP fork of epub4j (formerly epub4j-kotlin, which itself was a fork of epublib)."
     )
-    url.set("https://github.com/Wavesonics/epub4kmp")
+    url.set("https://github.com/Darkrock-Studios/epub4kmp")
     licenses {
       license {
         name.set("Apache License, Version 2.0")
@@ -83,9 +96,9 @@ mavenPublishing {
       }
     }
     scm {
-      connection.set("scm:git:git://github.com/Wavesonics/epub4kmp.git")
-      developerConnection.set("scm:git:ssh://github.com/Wavesonics/epub4kmp.git")
-      url.set("https://github.com/Wavesonics/epub4kmp")
+      connection.set("scm:git:git://github.com/Darkrock-Studios/epub4kmp.git")
+      developerConnection.set("scm:git:ssh://github.com/Darkrock-Studios/epub4kmp.git")
+      url.set("https://github.com/Darkrock-Studios/epub4kmp")
     }
   }
 }

@@ -3,7 +3,7 @@
 The `samples/reader-web` module is a Compose Multiplatform / wasmJs build of the
 EPUB reader. It is published to GitHub Pages, served out of this `docs/` folder.
 
-Live demo: `https://wavesonics.github.io/epub4kmp/`
+Live demo: `https://darkrock-studios.github.io/epub4kmp/`
 
 ## How to update the demo
 
