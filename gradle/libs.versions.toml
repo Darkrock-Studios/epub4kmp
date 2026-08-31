@@ -2,7 +2,7 @@
 kotlin = "2.3.21"
 okio = "3.17.0"
 xmlutil = "0.91.3"
-kmpZip = "0.12.1"
+kmpZip = "0.15.0"
 kotlinxDatetime = "0.7.1"
 maven-central-publish = "0.36.0"
 clikt = "5.0.3"
