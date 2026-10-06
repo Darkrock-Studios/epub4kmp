@@ -39,7 +39,7 @@ kotlin {
   @OptIn(KotlinNativeCacheApi::class)
   linuxX64Target.binaries.withType<Executable>().configureEach {
     disableNativeCache(
-      version = DisableCacheInKotlinVersion.`2_3_21`,
+      version = DisableCacheInKotlinVersion.`2_4_20`,
       reason = "clikt + clikt-mordant duplicate symbol on linuxX64 link",
       issueUrl = URI("https://github.com/ajalt/clikt/issues/598"),
     )
