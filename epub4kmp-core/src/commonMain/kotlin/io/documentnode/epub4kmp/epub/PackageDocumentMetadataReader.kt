@@ -149,7 +149,7 @@ internal object PackageDocumentMetadataReader : PackageDocumentBase() {
             println("Package does not contain element " + DCTags.identifier)
             return emptyList()
         }
-        val bookIdId = getBookIdId(metadataElement.ownerDocument)
+        val bookIdId = metadataElement.ownerDocument?.let(::getBookIdId)
         val out = mutableListOf<Identifier>()
         for (i in 0 until identifierElements.length) {
             val element = identifierElements.item(i) as? Element ?: continue

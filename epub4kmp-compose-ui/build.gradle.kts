@@ -4,7 +4,7 @@ import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 
 plugins {
 	alias(libs.plugins.kotlin.multiplatform)
-	alias(libs.plugins.android.library)
+	alias(libs.plugins.android.kmp.library)
 	alias(libs.plugins.compose)
 	alias(libs.plugins.compose.compiler)
 	alias(libs.plugins.maven.central.publish)
@@ -27,14 +27,17 @@ kotlin {
 	applyDefaultHierarchyTemplate()
 
 	jvm()
-	androidTarget {
-		publishLibraryVariants("release")
+	android {
+		namespace = "io.documentnode.epub4kmp.compose"
+		compileSdk = libs.versions.androidCompileSdk.get().toInt()
+		minSdk = libs.versions.androidMinSdk.get().toInt()
 	}
 	iosArm64()
 	iosSimulatorArm64()
 
 	wasmJs {
 		browser()
+		binaries.executable()
 	}
 
 	sourceSets {
@@ -57,14 +60,6 @@ kotlin {
 				implementation(kotlin("test"))
 			}
 		}
-	}
-}
-
-android {
-	namespace = "io.documentnode.epub4kmp.compose"
-	compileSdk = libs.versions.androidCompileSdk.get().toInt()
-	defaultConfig {
-		minSdk = libs.versions.androidMinSdk.get().toInt()
 	}
 }
 
