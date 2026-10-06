@@ -1,5 +1,5 @@
 [versions]
-kotlin = "2.3.21"
+kotlin = "2.4.20"
 okio = "3.17.0"
 xmlutil = "0.91.3"
 kmpZip = "1.0.0"
