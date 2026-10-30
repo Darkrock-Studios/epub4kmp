@@ -15,13 +15,14 @@ object PackageDocumentWriter : PackageDocumentBase() {
     ) {
         try {
             writer.startDocument(version = "1.0", encoding = Constants.CHARACTER_ENCODING)
-            // Use the OPF namespace as the document default; declare the Dublin Core
-            // prefix on the root so all <dc:*> children share the same declaration.
-            writer.startTag(NAMESPACE_OPF, OPFTags.packageTag, "")
-            writer.namespaceAttr(PREFIX_DUBLIN_CORE, NAMESPACE_DUBLIN_CORE)
-            // Bind the opf prefix too — needed for opf:scheme / opf:role / opf:file-as
-            // attributes used inside Dublin Core elements.
+            // OPF is the default namespace; opf is also bound for the opf:* attributes on dc:* elements.
+            // KtXmlWriter prefixes an element with the most recently declared binding of its namespace,
+            // so the default must be declared after xmlns:opf. Opening the root in the OPF namespace
+            // would declare the default first, hence the explicit declaration.
+            writer.startTag("", OPFTags.packageTag, "")
             writer.namespaceAttr(PREFIX_OPF, NAMESPACE_OPF)
+            writer.namespaceAttr(PREFIX_DUBLIN_CORE, NAMESPACE_DUBLIN_CORE)
+            writer.namespaceAttr("", NAMESPACE_OPF)
             writer.attribute(null, OPFAttributes.version, null, "2.0")
             writer.attribute(null, OPFAttributes.uniqueIdentifier, null, BOOK_ID_ID)
 
@@ -31,7 +32,7 @@ object PackageDocumentWriter : PackageDocumentBase() {
             writeSpine(book, epubWriter, writer)
             writeGuide(book, epubWriter, writer)
 
-            writer.endTag(NAMESPACE_OPF, OPFTags.packageTag, "")
+            writer.endTag("", OPFTags.packageTag, "")
             writer.endDocument()
             writer.flush()
         } catch (e: Exception) {
