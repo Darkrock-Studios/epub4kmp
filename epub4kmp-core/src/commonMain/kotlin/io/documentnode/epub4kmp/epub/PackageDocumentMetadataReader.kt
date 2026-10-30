@@ -61,7 +61,7 @@ internal object PackageDocumentMetadataReader : PackageDocumentBase() {
      */
     private fun readOtherProperties(metadataElement: Element): Map<QName, String> {
         val result: MutableMap<QName, String> = HashMap()
-        val metaTags = metadataElement.getElementsByTagName(OPFTags.meta)
+        val metaTags = metadataElement.getElementsByTagNameNS(NAMESPACE_OPF, OPFTags.meta)
         for (i in 0 until metaTags.length) {
             val element = metaTags.item(i) as? Element ?: continue
             val property = element.attributes.getNamedItem(OPFAttributes.property) ?: continue
@@ -76,7 +76,7 @@ internal object PackageDocumentMetadataReader : PackageDocumentBase() {
      * Consumes EPUB 2 `<meta name="..." content="...">` elements.
      */
     private fun readMetaProperties(metadataElement: Element): Map<String, String> {
-        val metaTags = metadataElement.getElementsByTagName(OPFTags.meta)
+        val metaTags = metadataElement.getElementsByTagNameNS(NAMESPACE_OPF, OPFTags.meta)
         val result = mutableMapOf<String, String>()
         for (i in 0 until metaTags.length) {
             val element = metaTags.item(i) as? Element ?: continue
@@ -88,12 +88,9 @@ internal object PackageDocumentMetadataReader : PackageDocumentBase() {
     }
 
     private fun getBookIdId(document: Document): String? {
-        val packageElement = DOMUtil.getFirstElementByTagNameNS(
-            document.documentElement ?: return null,
-            NAMESPACE_OPF,
-            OPFTags.packageTag
-        )
-        return packageElement?.getAttributeNS(NAMESPACE_OPF, OPFAttributes.uniqueIdentifier)
+        val packageElement = document.documentElement ?: return null
+        return DOMUtil.getAttribute(packageElement, NAMESPACE_OPF, OPFAttributes.uniqueIdentifier)
+            .ifEmpty { null }
     }
 
     private fun readCreators(metadataElement: Element): List<Author> =
@@ -157,7 +154,7 @@ internal object PackageDocumentMetadataReader : PackageDocumentBase() {
             val identifierValue = DOMUtil.getTextChildrenContent(element)
             if (identifierValue.isBlank()) continue
             val identifier = Identifier(schemeName, identifierValue)
-            if (element.getAttribute("id") == bookIdId) {
+            if (bookIdId != null && element.getAttribute("id") == bookIdId) {
                 identifier.isBookId = true
             }
             out.add(identifier)

@@ -20,6 +20,31 @@ dokka {
   }
 }
 
+// Exposes project.version to commonMain.
+val generateEpub4kmpVersion = tasks.register("generateEpub4kmpVersion") {
+  val version = project.version.toString()
+  val outputDir = layout.buildDirectory.dir("generated/epub4kmpVersion/kotlin")
+  inputs.property("version", version)
+  outputs.dir(outputDir)
+  doLast {
+    val file = outputDir.get().file("io/documentnode/epub4kmp/Epub4kmpVersion.kt").asFile
+    file.parentFile.mkdirs()
+    file.writeText(
+      """
+      |package io.documentnode.epub4kmp
+      |
+      |internal object Epub4kmpVersion {
+      |    const val VERSION: String = "$version"
+      |}
+      |""".trimMargin()
+    )
+  }
+}
+
+tasks.named("prepareKotlinIdeaImport") {
+  dependsOn(generateEpub4kmpVersion)
+}
+
 kotlin {
   applyDefaultHierarchyTemplate()
 
@@ -41,6 +66,7 @@ kotlin {
 
   sourceSets {
     commonMain {
+      kotlin.srcDir(generateEpub4kmpVersion)
       dependencies {
         implementation(libs.okio)
         implementation(libs.xmlutil.core)
